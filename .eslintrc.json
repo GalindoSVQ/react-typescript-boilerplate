@@ -5,11 +5,11 @@
     "jest/globals": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:security/recommended"
+    "plugin:react/recommended",
+    "plugin:security/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,42 +19,41 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "jsx-a11y", "import", "jest", "react-hooks", "security"],
+  "plugins": ["jest", "react", "react-hooks", "@typescript-eslint", "import", "security", "jsx-a11y", "prettier"],
   "rules": {
-    "jsx-a11y/rule-name": 2,
-    "import/no-extraneous-dependencies": "off",
-    "import/prefer-default-export": "off",
-    "import/no-cycle": "off",
-    "indent": ["error", "tab"],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
-    "semi": ["error", "never"],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "security/detect-unsafe-regex": "warn",
-    "security/detect-buffer-noassert": "warn",
-    "security/detect-child-process": "warn",
-    "security/detect-disable-mustache-escape": "warn",
-    "security/detect-eval-with-expression": "warn",
-    "security/detect-no-csrf-before-method-override": "warn",
-    "security/detect-non-literal-fs-filename": "warn",
-    "security/detect-non-literal-regexp": "warn",
-    "security/detect-non-literal-require": "warn",
-    "security/detect-object-injection": "warn",
-    "security/detect-possible-timing-attacks": "warn",
-    "security/detect-pseudoRandomBytes": "warn",
     "prettier/prettier": "warn",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-use-before-define": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-object-literal-type-assertion": "off",
-    "@typescript-eslint/ban-ts-ignore": "warn",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "markers": ["/"]
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": "off",
+    "react/jsx-boolean-value": "error",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
     "react/jsx-indent": "off",
     "react/jsx-closing-tag-location": "off",
-    "react/jsx-wrap-multilines": "off"
+    "react/jsx-wrap-multilines": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "overrides": [
     {

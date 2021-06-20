@@ -1,7 +1,7 @@
 {
   "name": "react-typescript-boilerplate",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -34,12 +34,6 @@
     "prelint:fix": "prettier --write 'src/**/*.{ts,tsx,json,js,jsx}'",
     "lint:fix": "eslint --ext .tsx,.ts --fix src/"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -56,10 +50,10 @@
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "eslint": "^7.29.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
