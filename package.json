@@ -62,6 +62,7 @@
     "eslint-plugin-security": "^1.4.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
+    "meow": "^10.0.1",
     "pinst": "^2.1.6"
   },
   "husky": {
