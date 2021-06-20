@@ -29,7 +29,10 @@
     "prepare": "husky install",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postpublish": "pinst --enable",
+    "lint": "eslint --ext .tsx,.ts src/",
+    "prelint:fix": "prettier --write 'src/**/*.{ts,tsx,json,js,jsx}'",
+    "lint:fix": "eslint --ext .tsx,.ts --fix src/"
   },
   "eslintConfig": {
     "extends": [
@@ -63,7 +66,8 @@
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "meow": "^10.0.1",
-    "pinst": "^2.1.6"
+    "pinst": "^2.1.6",
+    "prettier": "^2.3.1"
   },
   "husky": {
     "hooks": {
