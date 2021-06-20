@@ -42,8 +42,34 @@
     "security/detect-non-literal-require": "warn",
     "security/detect-object-injection": "warn",
     "security/detect-possible-timing-attacks": "warn",
-    "security/detect-pseudoRandomBytes": "warn"
+    "security/detect-pseudoRandomBytes": "warn",
+    "prettier/prettier": "warn",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-object-literal-type-assertion": "off",
+    "@typescript-eslint/ban-ts-ignore": "warn",
+    "react/jsx-indent": "off",
+    "react/jsx-closing-tag-location": "off",
+    "react/jsx-wrap-multilines": "off"
   },
+  "overrides": [
+    {
+      "files": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.js", "src/**/*.jsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    },
+    {
+      "files": ["tools/**/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
   "settings": {
     "react": {
       "version": "detect"
